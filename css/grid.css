@@ -1,0 +1,52 @@
+/*------------------------------------------------------------------------------------*\
+
+        A Simple CSS Grid v2.0
+        =================================
+		v2.0 - Revised, updated, simplified.
+		Adapted from Toast CSS framework, but mobile first as it should be.
+		Make sure to include respond.js if you want to support media queries in ie8.
+
+\*------------------------------------------------------------------------------------*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.container {
+	width: 96%;
+	margin: 0 auto;
+}
+.unit {
+	margin-bottom: 3%;
+}
+
+
+/* breakpoint +45em (720px) */
+@media screen and (min-width: 45em) {
+
+	.grid {
+		letter-spacing: -0.31em;
+		margin-left: -3%;
+	}
+	.unit {
+		display: inline-block;
+		vertical-align: top;
+		letter-spacing: normal;
+		margin: 0 0 3% 3%;
+	}
+	
+	.span-1 { width: 5.33333333325%; }
+	.span-2 { width: 13.6666666665%; }
+	.span-3 { width: 22%; }
+	.span-4 { width: 30.333333333%; }
+	.span-5 { width: 38.66666666625%; }
+	.span-6 { width: 47%; }
+	.span-7 { width: 55.33333333375%; }
+	.span-8 { width: 63.666666666%; }
+	.span-9 { width: 72%; }
+	.span-10 { width: 80.3333333325%; }
+	.span-11 { width: 88.66666666675%; }
+	.span-12 { width: 97%; }
+
+}
