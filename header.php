@@ -41,7 +41,7 @@
 	<header class="header" role="banner">
 		<h1><a href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a></h1>
 		<h2><?php bloginfo( 'description' ); ?></h2>
-			
+
 		<nav class="main-navigation" role="navigation">
 			<?php wp_nav_menu( array( 
 				'container' => false, 

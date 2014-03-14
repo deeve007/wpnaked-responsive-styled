@@ -1,4 +1,4 @@
-<?php get_header(); ?> 
+<?php get_header(); ?>
 
 <section class="unit span-8">
 

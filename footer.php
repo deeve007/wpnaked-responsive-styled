@@ -7,9 +7,6 @@
 	</footer>
 
 	<?php wp_footer(); ?>
-	<script>
-	  var nav = responsiveNav(".nav-collapse");
-	</script>
 </div><!-- .container -->
 </body>
 </html>

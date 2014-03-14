@@ -4,6 +4,11 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 		
 			<article class="unit span-8">
+				<?php
+				if ( has_post_thumbnail() ) {
+					the_post_thumbnail('post-main');
+				} ?>
+				
 				<h1 class="page-title"><?php the_title(); ?></h1>
 				<div class="entry-meta">
 					<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?></time>

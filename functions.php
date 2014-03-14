@@ -27,6 +27,10 @@ if ( ! isset( $content_width ) )
 	
 if ( is_singular() && get_option( 'thread_comments' ) )
 	wp_enqueue_script( 'comment-reply' );
+	
+/* Add image sizes for use in theme */
+add_image_size( 'post-main', 960, 540, true ); // main image for posts and pages
+
 
 /*-----------------------------------------------------------------------------------*/
 /* Enqueue Styles and Scripts
@@ -49,6 +53,18 @@ function load_the_scripts()  {
 	// if you would prefer to use normalize rather than a total reset simply comment out the above line and uncomment the below
 	wp_enqueue_style( 'load-reset', '//normalize-css.googlecode.com/svn/trunk/normalize.css','', 'screen' );
 	
+	// Let's have some superfish menu action
+	wp_enqueue_style( 'superfish-css', get_template_directory_uri() . '/css/superfish.css','', 'screen' );
+	wp_enqueue_script( 'superfish1-js', get_template_directory_uri() . '/js/hoverIntent.js', array( 'jquery' ),null,true );
+	wp_enqueue_script( 'superfish2-js', get_template_directory_uri() . '/js/superfish.min.js', array( 'superfish1-js' ),null,true );
+	// And mobile superfish
+	wp_enqueue_style( 'superfish-mobile-css', get_template_directory_uri() . '/css/superfish-mobile.css','', 'screen' );
+	wp_enqueue_script( 'superfish-mobile-js', get_template_directory_uri() . '/js/superfish-mobile.js', array( 'superfish2-js' ),null,true );
+	
+	// Let's add some nice web fonts for style
+	wp_enqueue_style( 'open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans' );
+	wp_enqueue_style( 'open-sans', 'http://fonts.googleapis.com/css?family=Rokkitt' );
+	
 	// load theme stylesheets
 	wp_enqueue_style( 'load-grid', get_template_directory_uri() . '/css/grid.css', array( 'load-reset' ), 'screen' );
 	wp_enqueue_style( 'load-style', get_template_directory_uri() . '/style.css', array( 'load-reset' ), 'screen' );
@@ -59,19 +75,6 @@ function load_the_scripts()  {
 		wp_register_style( 'childcss', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
 		wp_enqueue_style( 'childcss' );
 	}
-	
-	// Let's have some superfish menu action
-	wp_enqueue_style( 'superfish-css', get_template_directory_uri() . '/css/superfish.css','', 'screen' );
-	wp_enqueue_script( 'superfish1-js', get_template_directory_uri() . '/js/hoverIntent.js', array( 'jquery' ),null,true );
-	wp_enqueue_script( 'superfish2-js', get_template_directory_uri() . '/js/superfish.min.js', array( 'superfish1-js' ),null,true );
-	
-	// And a responsive menu too
-	wp_enqueue_style( 'responsivenav-css', get_template_directory_uri() . '/css/superfish.css', '', 'screen' );
-	wp_enqueue_script( 'responsivenav-js', get_template_directory_uri() . '/js/responsive-nav.min.js', array( 'jquery' ),null,true );
-	
-	// Let's add some nice web fonts for style
-	wp_enqueue_style( 'open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans' );
-	wp_enqueue_style( 'open-sans', 'http://fonts.googleapis.com/css?family=Rokkitt' );
   
 }
 if (!is_admin()) add_action("wp_enqueue_scripts", "load_the_scripts");

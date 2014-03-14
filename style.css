@@ -11,13 +11,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 /* ================================================================== *\
+   Colour scheme:
+   Search and replace this colour to change the site colour scheme: #5BA3BB
+\* ================================================================== */
+
+* img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* ================================================================== *\
    Layout
 \* ================================================================== */
 .container {
 	max-width: 1200px;
 }
 header.header {
-	border-top: 3px solid #91C448;
+	border-top: 3px solid #5BA3BB;
 	padding: 1.25em 0;
 }
 main.content {
@@ -31,7 +42,7 @@ main.content {
 html {
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 81.25%; /* 13px */
-	line-height: 1.65;
+	line-height: 1.8;
 }
 
 body {
@@ -99,7 +110,7 @@ blockquote p + p {
 	margin-top: 1em;
 }
 a {
-	color: #91C448;
+	color: #5BA3BB;
 	text-decoration: none;
 	-webkit-transition: color .2s;
 	transition: color .2s;
@@ -112,7 +123,7 @@ a:hover {
 	color: #333333;
 }
 .entry-title a:hover {
-	color: #91C448;
+	color: #5BA3BB;
 }
 .tagcloud {
 	line-height: 1.25;

@@ -1,0 +1,53 @@
+/*-----------------------------------------------------------------------------------*/
+/* Base stylesheet to use with Superfish Mobile add on
+/* V1.0
+/*-----------------------------------------------------------------------------------*/
+
+/* Remove some default styles to display all items vertically */
+ul.sf-menu.sf-mobile {
+	margin-top: 0;
+	display: none;
+}
+.sf-mobile > li {
+    float: none;
+}
+.sf-mobile ul {
+	position: relative;
+	display: block;
+	box-shadow: none;
+}
+.sf-mobile ul ul {
+    left: 0;
+}
+
+/* Add some styles for the mobile menu */
+.sf-mobile li {
+	background: #CCCCCC;
+	text-align: center;
+}
+.sf-mobile ul li {
+	background: #e1e1e1;
+}
+.sf-mobile ul ul li {
+	background: #EBEBEB;
+}
+.sf-mobile li:hover {
+	background: #c2c2c2;
+}
+.sf-mobile ul li:hover {
+	background: #CCCCCC;
+}
+.sf-mobile ul ul li:hover {
+	background: #e1e1e1;
+}
+
+/* Style the menu toggle button */
+.togglebutt {
+	background: #363636;
+	color: #fff;
+	text-align: center;
+	padding: 0.75em 1em;
+	display: block;
+	margin-top: 0.5em;
+	cursor: pointer;
+}
