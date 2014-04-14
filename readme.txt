@@ -10,10 +10,11 @@ With none of those custom functions, or funny naming conventions that so many ot
 Includes by default:
 - fluidvids.js to display embeded videos responsively at 100% width.
 - html5shiv.js for ie9 and below support of HTML5 elements.
-- Superfish dropdown menu
-- Normalize.css
+- respond.js for ie8 media query support.
+- Superfish dropdown menu.
+- Choose from Normalize.css or YUI reset.
 
 Reset v Normalize
 -----------------
 
-Decided to jump in with both feet into the Normalize water, and have to admit I'm liking not needing to set new styles for everything... maybe I'm sold?
+Decided to jump in with both feet into the Normalize water, and have to admit I'm liking not needing to set new styles for everything... maybe I'm sold? But for those who prefer a complete reset, just edit the functions.php file in the appropriate place and away you go!
