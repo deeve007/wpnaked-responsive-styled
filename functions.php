@@ -43,15 +43,15 @@ function load_the_scripts()  {
 	wp_enqueue_script( 'jquery', '/wp-includes/js/jquery/jquery.js', false, null, true );
 	
 	// load fluidvids
-	wp_enqueue_script( 'load-fitvids', get_template_directory_uri() . '/js/fluidvids.min.js','',null,true );
+	wp_enqueue_script( 'load-fluidvids', get_template_directory_uri() . '/js/fluidvids.min.js','',null,true );
 	
 	// load theme scripts & wordpress jquery
 	wp_enqueue_script( 'load-themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ),null,true );
 	
 	// load CSS reset
-	// wp_enqueue_style( 'load-reset', '//yui.yahooapis.com/3.13.0/build/cssreset/cssreset-min.css','', 'screen' );
-	// if you would prefer to use normalize rather than a total reset simply comment out the above line and uncomment the below
 	wp_enqueue_style( 'load-reset', '//normalize-css.googlecode.com/svn/trunk/normalize.css','', 'screen' );
+	// if you would prefer to use a total reset rather than normalize simply comment out the above line and uncomment the line below
+	// wp_enqueue_style( 'load-reset', '//yui.yahooapis.com/3.13.0/build/cssreset/cssreset-min.css','', 'screen' );
 	
 	// Let's have some superfish menu action
 	wp_enqueue_style( 'superfish-css', get_template_directory_uri() . '/css/superfish.css','', 'screen' );
@@ -61,9 +61,9 @@ function load_the_scripts()  {
 	wp_enqueue_style( 'superfish-mobile-css', get_template_directory_uri() . '/css/superfish-mobile.css','', 'screen' );
 	wp_enqueue_script( 'superfish-mobile-js', get_template_directory_uri() . '/js/superfish-mobile.js', array( 'superfish2-js' ),null,true );
 	
-	// Let's add some nice web fonts for style
+	// Let's add some nice web fonts for style - comment out or delete if you don't want to use these fonts
 	wp_enqueue_style( 'open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans' );
-	wp_enqueue_style( 'open-sans', 'http://fonts.googleapis.com/css?family=Rokkitt' );
+	wp_enqueue_style( 'font-rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt' );
 	
 	// load theme stylesheets
 	wp_enqueue_style( 'load-grid', get_template_directory_uri() . '/css/grid.css', array( 'load-reset' ), 'screen' );
@@ -86,12 +86,12 @@ function add_ie_support () {
 	global $is_IE;
 	if ($is_IE) {
 		echo '<!--[if lt IE 9]>';
-    	echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
-		echo '<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>';
+    	echo '<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>';
+		echo '<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>';
     	echo '<![endif]-->';
 	}
 }
-add_action('wp_footer', 'add_ie_support');
+add_action('wp_head', 'add_ie_support');
 
 
 /*-----------------------------------------------------------------------------------*/

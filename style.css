@@ -43,6 +43,7 @@ html {
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 81.25%; /* 13px */
 	line-height: 1.8;
+	overflow-y: scroll;
 }
 
 body {
@@ -118,6 +119,9 @@ a {
 a:hover {
 	color: #333333;
 	text-decoration: underline;
+}
+a:focus {
+	outline: none;
 }
 .entry-title a {
 	color: #333333;
