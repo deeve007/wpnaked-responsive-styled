@@ -58,24 +58,23 @@ body {
 	margin: 0;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Rokkitt', Georgia, serif;
-	color: #333333;
+	font-family: Georgia, serif;
 	font-weight: normal;
-	line-height: 1.35em;
+	color: #333333;
+	line-height: 1.15;
 	margin-top: 0;
 	text-rendering: optimizeLegibility;
 }
 h1 {
-	font-size: 220%;
-	line-height: 1em;
-	margin-bottom: 0.5em;
+	font-size: 200%;
+	margin-bottom: 0.35em;
 }
 h2 {
-	font-size: 180%;
+	font-size: 175%;
 	margin-bottom: 0.2em;
 }
 h3 {
-	font-size: 155%;
+	font-size: 150%;
 	margin-bottom: 0.15em;
 }
 h4 {
