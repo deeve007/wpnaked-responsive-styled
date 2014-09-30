@@ -21,12 +21,12 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" />
 	<!--         This is the traditional favicon.
 					- size: 16x16 or 32x32
 					- transparency is OK -->
 					 
-	<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/apple-touch-icon.png" />
 	<!--        - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for retina display (IMHO, just go ahead and use the biggest one)
 					- To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
 					- Transparency is not recommended (iOS will put a black BG behind the icon) -->
