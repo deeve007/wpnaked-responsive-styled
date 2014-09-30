@@ -213,3 +213,9 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+js/_responsive-nav.min.js
+js/_hoverIntent.js
+js/_jquery.flexnav.min.js
+css/_superfish.css
+css/_responsive-nav.css
+css/_flexnav.min.css
