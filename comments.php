@@ -39,7 +39,8 @@ if( !defined( 'ABSPATH' ) ) {
 				
 				) ),	
 			'comment_field' => '<p><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Let me know what you have to say..."></textarea></p>',
-			'comment_notes_after' => ''
+			'comment_notes_after' => '',
+			'title_reply' => 'Leave feedback'
 		)
 	); ?>
 
