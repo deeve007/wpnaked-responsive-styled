@@ -11,7 +11,7 @@ Includes by default:
 - fluidvids.js to display embeded videos responsively at 100% width.
 - html5shiv.js for ie9 and below support of HTML5 elements.
 - respond.js for ie8 media query support.
-- Superfish dropdown menu.
+- Superfish dropdown menu with additional super sexy responsive version included.
 - Choose from Normalize.css or YUI reset.
 
 Reset v Normalize
