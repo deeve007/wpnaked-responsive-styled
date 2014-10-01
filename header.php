@@ -32,7 +32,12 @@
 					- Transparency is not recommended (iOS will put a black BG behind the icon) -->
 			
 	<!-- css + javascript -->
+	<script>
+	// Picture element HTML5 shiv for picturefill responsive images
+	document.createElement( "picture" );
+	</script>
 	<?php wp_head(); ?>
+
 </head>
 <body <?php body_class(); ?>>
 <div class="container">

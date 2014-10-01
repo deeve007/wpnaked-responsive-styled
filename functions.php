@@ -29,7 +29,8 @@ if ( is_singular() && get_option( 'thread_comments' ) )
 	wp_enqueue_script( 'comment-reply' );
 	
 /* Add image sizes for use in theme */
-add_image_size( 'post-main', 960, 540, true ); // main image for posts and pages
+add_image_size( 'page-banner', 800, 450, true ); // medium main image for posts and pages
+add_image_size( 'page-banner-small', 400, 225, true ); // small main image for posts and pages
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -42,16 +43,19 @@ function load_the_scripts()  {
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', '/wp-includes/js/jquery/jquery.js', false, null, true );
 	
-	// load fluidvids
-	wp_enqueue_script( 'load-fluidvids', get_template_directory_uri() . '/js/fluidvids.min.js','',null,true );
+	// load fluidvids ( updating above 2.2 breaks responsive menu, some conflict in new fluidvids code )
+	wp_enqueue_script( 'fluidvids-js', get_template_directory_uri() . '/js/fluidvids.min.js','',null,true );
+	
+	// load picturefill for responsive images
+	wp_enqueue_script( 'picturefill-js', '//cdnjs.cloudflare.com/ajax/libs/picturefill/2.1.0/picturefill.min.js' );
 	
 	// load theme scripts & wordpress jquery
-	wp_enqueue_script( 'load-themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ),null,true );
+	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ),null,true );
 	
 	// load CSS reset
-	wp_enqueue_style( 'load-reset', '//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css','', 'screen' );
+	wp_enqueue_style( 'reset-css', '//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css','', 'screen' );
 	// if you would prefer to use a total reset rather than normalize simply comment out the above line and uncomment the line below
-	// wp_enqueue_style( 'load-reset', '//yui.yahooapis.com/3.13.0/build/cssreset/cssreset-min.css','', 'screen' );
+	// wp_enqueue_style( 'reset-css', '//yui.yahooapis.com/3.13.0/build/cssreset/cssreset-min.css','', 'screen' );
 	
 	// Let's have some superfish menu action
 	wp_enqueue_style( 'superfish-css', '//cdnjs.cloudflare.com/ajax/libs/superfish/1.7.4/superfish.min.css','', 'screen' );
@@ -65,8 +69,8 @@ function load_the_scripts()  {
 	wp_enqueue_style( 'open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans' );
 	
 	// load theme stylesheets
-	wp_enqueue_style( 'load-grid', get_template_directory_uri() . '/css/grid.css', array( 'load-reset' ), 'screen' );
-	wp_enqueue_style( 'load-style', get_template_directory_uri() . '/style.css', array( 'load-reset' ), 'screen' );
+	wp_enqueue_style( 'load-grid', get_template_directory_uri() . '/css/grid.css', array( 'reset-css' ), 'screen' );
+	wp_enqueue_style( 'load-style', get_template_directory_uri() . '/style.css', array( 'reset-css' ), 'screen' );
 	
 	// add support for child themes without needing to manually import parent theme style.css via @import
 	// add after parent theme css so it can override settings if required
@@ -84,7 +88,7 @@ function add_ie_support () {
 	global $is_IE;
 	if ($is_IE) {
 		echo '<!--[if lt IE 9]>';
-    	echo '<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>';
+    	echo '<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>';
 		echo '<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>';
     	echo '<![endif]-->';
 	}
