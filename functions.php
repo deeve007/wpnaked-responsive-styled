@@ -46,9 +46,6 @@ function load_the_scripts()  {
 	// load fluidvids ( updating above 2.2 breaks responsive menu, some conflict in new fluidvids code )
 	wp_enqueue_script( 'fluidvids-js', get_template_directory_uri() . '/js/fluidvids.min.js','',null,true );
 	
-	// load picturefill for responsive images
-	wp_enqueue_script( 'picturefill-js', '//cdnjs.cloudflare.com/ajax/libs/picturefill/2.1.0/picturefill.min.js' );
-	
 	// load theme scripts & wordpress jquery
 	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ),null,true );
 	

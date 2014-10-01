@@ -36,6 +36,9 @@
 	// Picture element HTML5 shiv for picturefill responsive images
 	document.createElement( "picture" );
 	</script>
+	<!-- Asynchronously load the polyfill -->
+	<!-- Would prefer in functions.php file but can not load asynchronously in the header that way as required for picturefill -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/picturefill/2.1.0/picturefill.min.js" async></script>
 	<?php wp_head(); ?>
 
 </head>

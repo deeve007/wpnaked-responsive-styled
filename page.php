@@ -8,10 +8,12 @@
 				if ( has_post_thumbnail() ) {
 					$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'page-banner' );
 					$smallthumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'page-banner-small' );
-					$url = $thumb['0'];
-					$smallurl = $smallthumb['0'];
+					$url = $thumb[0];
+					$smallurl = $smallthumb[0];
+					$alt_text = get_post_meta( get_post_thumbnail_id($post->ID), '_wp_attachment_image_alt', true );
+					
 					// picturefill responsive images
-					echo '<img src="'.$smallurl.'" srcset="'.$smallurl.' 500w, '.$url.' 800w" />';
+					echo '<img srcset="'.$smallurl.' 500w, '.$url.' 800w" alt="'.$alt_text.'" />';
 				} ?>
 
 				
