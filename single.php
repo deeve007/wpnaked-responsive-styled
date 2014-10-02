@@ -13,7 +13,7 @@
 					$alt_text = get_post_meta( get_post_thumbnail_id($post->ID), '_wp_attachment_image_alt', true );
 					
 					// picturefill responsive images
-					echo '<img srcset="'.$smallurl.' 500w, '.$url.' 800w" alt="'.$alt_text.'" />';
+					echo '<img srcset="'.$smallurl.' 900w, '.$url.' 1000w" alt="'.$alt_text.'" class="banner-image" />';
 				} ?>
 				
 				<h1 class="page-title"><?php the_title(); ?></h1>

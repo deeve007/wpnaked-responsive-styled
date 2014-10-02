@@ -14,9 +14,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
    Search and replace this colour to change the site colour scheme: #5BA3BB
 \* ================================================================== */
 
+
+/* ================================================================== *\
+   Images
+\* ================================================================== */
 * img {
 	max-width: 100%;
 	height: auto;
+}
+.banner-image { /* Featured image at top of posts & pages */
+	margin-bottom: 0.75em;
+	width: 100%;
 }
 
 
